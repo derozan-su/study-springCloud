@@ -1,0 +1,19 @@
+server:
+  port: 9091
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///ssm
+    username: root
+    password: ROOT
+  application:
+    name: user-service
+mybatis:
+  type-aliases-package: com.su.user.pojo
+  configuration:
+    # 控制台输出执行sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
